@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+<bean id="springLoginRequestController" class="com.test.GetLoginController"/>
+<bean id="springLoginController" class="com.test.DoLoginController">
+<property name="commandClass" value="com.test.Login"></property>
+</bean>
+
+	<bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="login.do">springLoginRequestController</prop>
+				<prop key="doLogin.do">springLoginController</prop>
+			</props>
+		</property>
+	</bean>
+</beans>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="Mail" class="com.test.Mail" >
+		<constructor-arg index="0" value="10" type="java.lang.Integer"></constructor-arg>
+		<constructor-arg index="1" value="email123" type="java.lang.String"></constructor-arg>
+		<constructor-arg index="2" value="email1222" type="java.lang.String"></constructor-arg>
+	</bean>
+	<bean id="Address" class="com.test.Address">
+		<constructor-arg index="0" value="Maruthinagar" type="java.lang.String"></constructor-arg>
+		<constructor-arg index="1" value="Bangalore" type="java.lang.String"></constructor-arg>
+		<constructor-arg index="2" ref="Mail"></constructor-arg>
+	</bean>
+
+</beans>
+

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="Person" class="com.test.Person">
+		<property name="age" value="28" />
+		<property name="name" value="Manohar"></property>
+		<property name="address" ref="Address" />
+
+		<property name="lovers">
+			<list>
+				<value>India</value>
+				<value>Cricket</value>
+			</list>
+		</property>
+
+		<property name="mails">
+			<list>
+				<value>manohar@ctfs.com</value>
+				<value>manohar@gmail.com</value>
+			</list>
+		</property>
+
+		<property name="jobs">
+			<set>
+				<value>SE</value>
+				<value>SSE</value>
+			</set>
+		</property>
+
+		<property name="education">
+			<map>
+				<entry key="Degree">
+					<value>BSC</value>
+				</entry>
+				<entry key="PG">
+					<value>MSC</value>
+				</entry>
+			</map>
+		</property>
+	</bean>
+	<bean id="Address" class="com.test.Address" singleton="false"
+		init-method="Init" destroy-method="Destroy">
+
+		<property name="streetName" value="Maruthinagar"></property>
+		<property name="city" value="Bangalore"></property>
+
+	</bean>
+
+
+</beans>
+

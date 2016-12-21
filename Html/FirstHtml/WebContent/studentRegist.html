@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Student Registration</title>
+</head>
+<script type="text/javascript" src="myScript.js">
+</script>
+
+<body>
+   <form name="studentRegist">
+   
+    <center><image src="2009-0617-Ontonagon-school.jpg" width="150px" height="150px"></image></center>
+   
+       <table align="center" border="1">
+          <tr>
+           <td>FirstName:</td>
+           <td><input type="text" name="fname" onchange="changeColor(this)"></td>
+          </tr>
+          <tr>
+           <td>LastName:</td>
+           <td><input type="text" name="lname" onchange="changeColor(this)"></td>
+          </tr>
+          <tr>
+           <td>Email:</td>
+           <td><input type="text" name="email" onchange="changeColor(this)"></td>
+          </tr>
+          <tr>
+           <td>DOB:</td>
+           <td><input type="text" name="dob"></td>
+          </tr>
+          <tr>
+           <td>Gender:</td>
+           <td><input type="radio" name="gender" value="male">Male <input type="radio" name="gender" value="female">Female</td>
+          </tr>
+          <tr>
+           <td>Skills:</td>
+           <td><input type="checkbox" name="skills" value="c">C <input type="checkbox" name="skills" value="c++">C++ <input type="checkbox" name="skills" value="java">Java </td>
+          </tr>
+          <tr>
+           <td>University:</td>
+           <td>
+             <select name="university">
+               <option value="select">Select</option>
+               <option value="university1">University 1</option>
+               <option value="university2">University 2</option>
+             </select>
+           </td>
+          </tr>
+          <tr>
+           <td>Address:</td>
+           <td><textarea name="address" rows="4" cols="30"></textarea></td>
+          </tr>
+          <tr>
+           <td colspan="2" align="center"><input type="button" value="Submit" onclick="validation()"/></td>
+          </tr>
+          
+       </table>
+   </form> 
+</body>
+</html>
